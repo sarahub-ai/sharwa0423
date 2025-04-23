@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎉 Happy Birthday!</title>
+  <style>
+    body {
+      background: #fceaff;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #ff66a3;
+    }
+
+    #gift-box {
+      width: 200px;
+      height: 200px;
+      background: #ff66a3;
+      margin: 50px auto;
+      position: relative;
+      border-radius: 20px;
+      cursor: pointer;
+      animation: bounce 2s infinite;
+    }
+
+    #gift-box::before {
+      content: '';
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 200px;
+      height: 40px;
+      background: #fff;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    #message {
+      display: none;
+      font-size: 1.5em;
+      color: #333;
+      margin-top: 30px;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Хүндэт Шаравжамц та энд дарна уу!≽^•˕• ྀི≼ </h1>
+  <div id="gift-box"></div>
+  <div id="message">˚ ༘ ೀ⋆｡˚𝐻𝒶𝓅𝓅𝓎 𝒷𝒾𝓇𝓉𝒽𝒹𝒶𝓎˚ ༘ ೀ⋆｡˚<br>Хамгийн сайн найз,хамгийн хайрт дүүдээ! 💖</div>
+
+  <script>
+    const box = document.getElementById('gift-box');
+    const message = document.getElementById('message');
+
+    box.addEventListener('click', () => {
+      box.style.display = 'none';
+      message.style.display = 'block';
+    });
+  </script>
+</body>
+</html>
